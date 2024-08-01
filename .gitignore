@@ -162,6 +162,7 @@ cython_debug/
 # Pelican
 output/
 
+# Replit
 .pythonlibs/
 poetry.lock
-pyproject.toml
+#pyproject.toml
