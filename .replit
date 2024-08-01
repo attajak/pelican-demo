@@ -1,0 +1,21 @@
+run = "pelican -l -r -b 0.0.0.0"
+entrypoint = "README.md"
+modules = ["python-3.10"]
+hidden = [".pythonlibs"]
+
+[nix]
+channel = "stable-24_05"
+
+[unitTest]
+language = "python3"
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix"]
+
+[deployment]
+run = ["python3", "main.py"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 8000
+externalPort = 80
